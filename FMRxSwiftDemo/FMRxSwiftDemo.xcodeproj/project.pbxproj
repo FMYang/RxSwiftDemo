@@ -30,6 +30,8 @@
 		E41D14F628F6B44B0062B4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41D150728F6B89D0062B4E3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E46DA0FC28F81EC60028C96A /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		E46DA10028F912740028C96A /* 1.Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 1.Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E46DA10128F954650028C96A /* 2.Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2.Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		E41D14E728F6B4490062B4E3 /* FMRxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E46DA0FE28F912410028C96A /* RxSwift */,
 				E46DA0F728F7E6130028C96A /* Classes */,
 				E41D14E828F6B4490062B4E3 /* AppDelegate.swift */,
 				E41D14EC28F6B4490062B4E3 /* ViewController.swift */,
@@ -132,6 +135,15 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E46DA0FE28F912410028C96A /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E46DA10028F912740028C96A /* 1.Observable.playground */,
+				E46DA10128F954650028C96A /* 2.Subject.playground */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
