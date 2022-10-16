@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 40))
         btn.backgroundColor = .gray
+        btn.setTitle("Click", for: .normal)
         view.addSubview(btn)
                 
         btn.rx.tap.subscribe(onNext:  { [unowned self] in
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
             self.i += 1
         }).disposed(by: disposeBag)
         
-        viewModel.str.asObservable().bind(to: textLabel.rx.text).disposed(by: disposeBag)
+        viewModel.str.asObservable().bind(to: textLabel.rx.text).disposed(by: disposeBag)        
     }
     
     private func makeUI() {

@@ -8,7 +8,7 @@ import RxSwift
  observable的创建方法，有如下类方法（扩展添加的）：
  just: 创建单个元素的observable序列，元素发射后终止（completed）
  of: 创建observable序列，参数可以是基本数据、数组
- from: 创建observable序列，参数只支持数组
+ from: 创建observable序列，参数只支持数组，数组元素一个一个发出，对数组降维
  empty: 创建一个空的observable序列，只发射completed事件
  never: 创建一个不发射任何事件并且永不终止的observable序列，可表示无限无限持续的时间
  range: 创建生成一系列值的observable序列
@@ -82,17 +82,22 @@ example(of: "of") {
 }
 
 example(of: "from") {
-    let disposeBag = DisposeBag()
-
-    let observable = Observable.from([1, 2, 3])
-    observable
-        .subscribe { event in
-            // event
-            if let element = event.element {
-                print(element)
-            }
-        }
-        .disposed(by: disposeBag)
+    Observable.from([1, 2, 3])
+        .subscribe(onNext: {
+            print($0)
+        })
+    
+    /*
+     from的两种用法
+     from返回数组，会将数组的每个元素分开发出，可对数组降维。
+     想返回数组又不想降维，可使用from返回可选值，直接返回可选值，或者使用of操作符
+    */
+    
+    var arr: [Int]? = [1, 2, 3]
+    Observable.from(optional: arr)
+        .subscribe(onNext: {
+            print($0)
+        })
 }
 
 example(of: "empty") {
