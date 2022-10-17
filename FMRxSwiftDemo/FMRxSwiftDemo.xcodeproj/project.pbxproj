@@ -23,8 +23,8 @@
 		17D847B6E0BDB50A67794435 /* Pods_FMRxSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMRxSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F51792BE6DA29ACB24DDB4 /* Pods-FMRxSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMRxSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-FMRxSwiftDemo/Pods-FMRxSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8842B79028FA9C5B00B8D5E3 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
-		88D5F0AD28FC12C700AEC4DF /* 7.transform_operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 7.transform_operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		88E3E56728FAFF3900139453 /* 5.filter_operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 5.filter_operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		88D5F0AD28FC12C700AEC4DF /* 7.Transform_operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 7.Transform_operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		88E3E56728FAFF3900139453 /* 5.Filter_operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 5.Filter_operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E41D14E528F6B4490062B4E3 /* FMRxSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMRxSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41D14E828F6B4490062B4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E41D14EC28F6B4490062B4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +33,7 @@
 		E41D14F428F6B44B0062B4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E41D14F628F6B44B0062B4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41D150728F6B89D0062B4E3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E4543B8628FD5A7C00C3A467 /* 9.Combining_operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 9.Combining_operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E46DA0FC28F81EC60028C96A /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		E46DA10028F912740028C96A /* 1.Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 1.Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E46DA10128F954650028C96A /* 2.Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2.Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -147,8 +148,9 @@
 				8842B79028FA9C5B00B8D5E3 /* NameSpace.swift */,
 				E46DA10028F912740028C96A /* 1.Observable.playground */,
 				E46DA10128F954650028C96A /* 2.Subject.playground */,
-				88E3E56728FAFF3900139453 /* 5.filter_operators.playground */,
-				88D5F0AD28FC12C700AEC4DF /* 7.transform_operators.playground */,
+				88E3E56728FAFF3900139453 /* 5.Filter_operators.playground */,
+				88D5F0AD28FC12C700AEC4DF /* 7.Transform_operators.playground */,
+				E4543B8628FD5A7C00C3A467 /* 9.Combining_operators.playground */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";

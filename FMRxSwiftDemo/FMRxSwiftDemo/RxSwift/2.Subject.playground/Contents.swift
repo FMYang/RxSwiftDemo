@@ -14,9 +14,6 @@ import RxSwift
  publishSubject: 开始为空，仅向订阅者发出最新的元素
  BehaviorSubject: 初始值开始，重复发出初始值或最新的元素给新的订阅者
  ReplaySubject: 使用缓冲区初始化，重复发送缓冲区的元素给新的订阅者
- 
- publishSubject收到终止事件completed、error后，它不在发出next事件，可是会重复发出停止事件给新的订阅者
- BehaviorSubject收到停止事件后，
  */
 
 
