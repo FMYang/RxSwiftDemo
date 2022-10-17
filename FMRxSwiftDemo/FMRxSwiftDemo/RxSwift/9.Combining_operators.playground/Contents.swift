@@ -9,7 +9,7 @@ import RxSwift
          注意：concat连接的observable的类型必须相同，否则编译器会报错
  concatMap: 将源observable的每一个元素应用一个转换方法，转换成一个新的observable，
             按顺序发出，前一个发射完成后，后一个才开始放射
- zip:
+ merge: 将多个observable合并成一个，有一个observable发射错误，合并的observable发送错误并立即终止
  */
 
 public func example(of description: String, action: ()->Void) {
@@ -72,4 +72,26 @@ example(of: "concatMap") {
         .subscribe(onNext: {
             print($0)
         })
+}
+
+example(of: "merge") {
+    enum MyError: Error {
+        case anError
+    }
+    
+    let subject1 = PublishSubject<String>()
+    let subject2 = PublishSubject<String>()
+        
+    Observable.merge(subject1, subject2)
+        .subscribe(onNext: {
+            print($0)
+        }, onError: {
+            print($0)
+        })
+    
+    subject1.onNext("1")
+    subject2.onNext("A")
+    subject1.onError(MyError.anError)
+    subject1.onNext("2")
+    subject2.onNext("b")
 }
