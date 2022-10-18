@@ -10,6 +10,7 @@ import RxSwift
  concatMap: 将源observable的每一个元素应用一个转换方法，转换成一个新的observable，
             按顺序发出，前一个发射完成后，后一个才开始放射
  merge: 将多个observable合并成一个，有一个observable发射错误，合并的observable发送错误并立即终止
+ combineLatest:
  */
 
 public func example(of description: String, action: ()->Void) {
@@ -92,6 +93,28 @@ example(of: "merge") {
     subject1.onNext("1")
     subject2.onNext("A")
     subject1.onError(MyError.anError)
+    subject1.onNext("2")
+    subject2.onNext("b")
+}
+
+example(of: "combineLatest") {
+    enum MyError: Error {
+        case anError
+    }
+    
+    let subject1 = PublishSubject<String>()
+    let subject2 = PublishSubject<String>()
+        
+    Observable.combineLatest(subject1.asObservable(), subject2.asObservable())
+        .subscribe(onNext: {
+            print($0)
+        }, onError: {
+            print($0)
+        })
+    
+    subject1.onNext("1")
+    subject2.onNext("A")
+    subject2.onNext("C")
     subject1.onNext("2")
     subject2.onNext("b")
 }
