@@ -80,26 +80,26 @@ example(of: "of") {
         })
         .disposed(by: disposeBag)
 }
-
+//
 example(of: "from") {
     Observable.from([1, 2, 3])
         .subscribe(onNext: {
             print($0)
         })
-    
+
     /*
      from的两种用法
      from返回数组，会将数组的每个元素分开发出，可对数组降维。
      想返回数组又不想降维，可使用from返回可选值，直接返回可选值，或者使用of操作符
     */
-    
+
     var arr: [Int]? = [1, 2, 3]
     Observable.from(optional: arr)
         .subscribe(onNext: {
             print($0)
         })
 }
-
+//
 example(of: "empty") {
     let disposeBag = DisposeBag()
 
@@ -116,7 +116,7 @@ example(of: "empty") {
         })
         .disposed(by: disposeBag)
 }
-
+//
 example(of: "never") {
     let disposeBag = DisposeBag()
 
@@ -133,7 +133,7 @@ example(of: "never") {
         })
         .disposed(by: disposeBag)
 }
-
+//
 example(of: "range") {
     let disposeBag = DisposeBag()
 
@@ -147,7 +147,7 @@ example(of: "range") {
         }
         .disposed(by: disposeBag)
 }
-
+//
 example(of: "create") {
     let disposeBag = DisposeBag()
 
@@ -166,6 +166,6 @@ example(of: "create") {
             }
         }
         .disposed(by: disposeBag)
-    
+
     // 注意：如果没有调用onCompleted事件，也没有加入disposeBag，这里会产生内存泄漏
 }
